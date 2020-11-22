@@ -2,7 +2,7 @@
 
 ## Génération de l'autorité de certification et des certificats
 
-### Création de l'autorité de certification
+### Création de l'autorité de certification
 
 ```
 openssl genrsa -des3 -out rootCA.key 4096
