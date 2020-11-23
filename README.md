@@ -20,7 +20,7 @@ openssl x509 -req -in vaultApp.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateser
 ### Création du certificat de l'application web
 
 ```
-openssl genrsa -out webApp.key 2048
-openssl req -new -config tls_web_app.conf -key webApp.key -out webApp.csr
-openssl x509 -req -in webApp.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out webApp.crt -days 500 -sha256
+openssl genrsa -out webApp.pem 2048
+openssl req -new -config tls_web_app.conf -key webApp.pem -out webApp.csr
+openssl x509 -req -in webApp.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out webApp.pem -days 500 -sha256
 ```
